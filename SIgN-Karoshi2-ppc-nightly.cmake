@@ -18,7 +18,7 @@ set(ENV{CXXFLAGS} "")
 
 macro(dashboard_hook_init)
   set( dashboard_cache "
-    CMAKE_OSX_ARCHITECTURES=${arch}
+    CMAKE_OSX_ARCHITECTURES:STRING=${arch}
     BUILD_TESTING:BOOL=ON
     BUILD_EXAMPLES:BOOL=ON
     BUILD_SHARED_LIBS:BOOL=ON
