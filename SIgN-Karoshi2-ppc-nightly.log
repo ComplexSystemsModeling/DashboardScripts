@@ -1,0 +1,7 @@
+CMake Error at SIgN-Karoshi2-ppc-nightly.cmake:48 (include):
+  include could not find load file:
+
+    /Users/alexgouaillard/DEVEL/GITROOT/DashboardScripts/ITKScripts/itk_common.cmake
+
+
+Error in read script: /Users/alexgouaillard/DEVEL/GITROOT/DashboardScripts/SIgN-Karoshi2-ppc-nightly.cmake
