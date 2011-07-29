@@ -3,13 +3,13 @@
 
 set( arch x86_64 ) # ppc;i386;ppc64;x86_64
 set( CTEST_SITE "karoshi2.SIgN" )
-set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}" )
+set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}-WRAPITK" )
 set( CTEST_BUILD_CONFIGURATION "Release" )
 set( CTEST_CMAKE_GENERATOR "Unix Makefiles" )
 set( CTEST_BUILD_FLAGS -j12 )
 set( CTEST_TEST_ARGS PARALLEL_LEVEL 8 )
 set( dashboard_root_name "Dashboards" )
-set( dashboard_binary_name ITK-${arch} )
+set( dashboard_binary_name ITK-${arch}-WRAPITK )
 
 set(ENV{CC}  gcc-4.2)
 set(ENV{CXX} c++-4.2)
@@ -24,15 +24,15 @@ macro(dashboard_hook_init)
     BUILD_SHARED_LIBS:BOOL=ON
     ITK_LEGACY_SILENT:BOOL=ON
     ITK_USE_REVIEW:BOOL=ON
-#    USE_WRAP_ITK:BOOL=ON
-#    WRAP_ITK_JAVA:BOOL=ON
-#    WRAP_ITK_PYTHON:BOOL=ON
+    USE_WRAP_ITK:BOOL=ON
+    WRAP_ITK_USE_CCACHE:BOOL=ON
+#    WRAP_ITK_EXPLICIT:BOOL=ON
+    WRAP_ITK_JAVA:BOOL=ON
+    WRAP_ITK_PYTHON:BOOL=ON
 #    WRAP_ITK_TCL:BOOL=ON
 #    WRAP_ITK_DOC:BOOL=ON
-#    WRAP_ITK_USE_CCACHE:BOOL=ON
-#    WRAP_ITK_EXPLICIT:BOOL=ON
-#    WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
-#    GCCXML:FILEPATH=/Users/CoSMoTest-Mac/src/gccxml/build-${arch}/bin/gccxml
+    WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
+    GCCXML:FILEPATH=/Users/agouaillard/DEVEL/CVSROOT/gccxml/build-${arch}/bin/gccxml
     "
     )
 
