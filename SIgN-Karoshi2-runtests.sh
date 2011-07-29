@@ -7,7 +7,8 @@ cd /Users/alexgouaillard/DEVEL/GITROOT/DashboardScripts
 git pull >& git.log 
 
 # Run the scripts
-ctest -S SIgN-Karoshi2-ppc-nightly.cmake -V >& SIgN-Karoshi2-ppc-nightly.log
+ctest -S SIgN-Karoshi2-ppc-nightly.cmake  -V >& SIgN-Karoshi2-ppc-nightly.log
+ctest -S SIgN-Karoshi2-i386-nightly.cmake -V >& SIgN-Karoshi2-i386-nightly.log
 
 # Update the crontab for next day
 crontab SIgN-Karoshi2.crontab
