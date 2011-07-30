@@ -2,7 +2,7 @@
 # gcc (GCC) 4.2
 
 set( arch i386 ) # ppc;i386;ppc64;x86_64
-set( CTEST_SITE "CoSMoTest-Mac" )
+set( CTEST_SITE "Durian.CoSMo.sg" )
 set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}-WRAPITK" )
 set( CTEST_BUILD_CONFIGURATION "Release" )
 set( CTEST_CMAKE_GENERATOR "Unix Makefiles" )

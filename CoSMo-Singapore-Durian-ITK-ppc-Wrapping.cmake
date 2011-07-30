@@ -2,13 +2,13 @@
 # gcc (GCC) 4.2
 
 set( arch ppc ) # ppc;i386;ppc64;x86_64
-set( CTEST_SITE "CoSMoTest-Mac" )
+set( CTEST_SITE "Durian.CoSMo.sg" )
 set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}-WRAPITK" )
 set( CTEST_BUILD_CONFIGURATION "Release" )
 set( CTEST_CMAKE_GENERATOR "Unix Makefiles" )
 set( CTEST_BUILD_FLAGS -j2 )
 set( CTEST_TEST_ARGS PARALLEL_LEVEL 2 )
-set( dashboard_root_name "tests" )
+set( dashboard_root_name "Dashboards" )
 set( dashboard_binary_name ITK-${arch}-WRAPITK )
 
 set(ENV{CC}  gcc-4.2)
