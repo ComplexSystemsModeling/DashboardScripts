@@ -1,0 +1,2 @@
+59 20 * * * ~/DEVEL/GITROOT/DashbordScripts/CoSMo-Singapore-ChickenRice-ITK-runtests.sh > runtests.log
+
