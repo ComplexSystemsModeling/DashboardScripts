@@ -3,7 +3,7 @@
 
 set( arch ppc ) # ppc;i386;ppc64;x86_64
 set( CTEST_SITE "karoshi2.SIgN" )
-set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}" )
+set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}-WRAPITK" )
 set( CTEST_BUILD_CONFIGURATION "Release" )
 set( CTEST_CMAKE_GENERATOR "Unix Makefiles" )
 set( CTEST_BUILD_FLAGS -j12 )
