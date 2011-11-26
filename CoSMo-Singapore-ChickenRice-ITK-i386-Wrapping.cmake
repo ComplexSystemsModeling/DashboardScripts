@@ -30,7 +30,7 @@ macro(dashboard_hook_init)
     WRAP_ITK_USE_CCACHE:BOOL=ON
 #    WRAP_ITK_EXPLICIT:BOOL=ON
     WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
-    GCCXML:FILEPATH=/Users/CoSMoTest-Mac/src/gccxml/build-i386/bin/gccxml
+    GCCXML:FILEPATH=/Users/cosmo-macpro/DEVEL/gccxml-0.6.0/build_${arch}/bin/gccxml
     "
     )
 
