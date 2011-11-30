@@ -1,11 +1,11 @@
 #!/bin/bash -x
 
+# goes to the script location
+cd ~/DEVEL/GITROOT/DashboardScripts/
+
 # whatever
 export PATH=/usr/local/git/bin:$PATH
 date >> dates.txt
-
-# goes to the script location
-cd ~/DEVEL/GITROOT/DashboardScripts/
 
 #update scripts
 git pull > git.log

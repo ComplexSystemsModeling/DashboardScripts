@@ -21,16 +21,18 @@ macro(dashboard_hook_init)
     BUILD_EXAMPLES:BOOL=ON
     BUILD_SHARED_LIBS:BOOL=ON
     ITK_LEGACY_SILENT:BOOL=ON
+    # need to be explicit here because of conflicting port install
+    PYTHON_LIBRARY:FILEPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib
     ITK_USE_REVIEW:BOOL=ON
+    # review requires a lot of java heap
+    WRAP_ITK_JAVAC_ARGS:STRING=-J-mx2048m
     USE_WRAP_ITK:BOOL=ON
     WRAP_ITK_JAVA:BOOL=ON
     WRAP_ITK_PYTHON:BOOL=ON
-#    WRAP_ITK_TCL:BOOL=ON
-#    WRAP_ITK_DOC:BOOL=ON
     WRAP_ITK_USE_CCACHE:BOOL=ON
 #    WRAP_ITK_EXPLICIT:BOOL=ON
-    WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
-    GCCXML:FILEPATH=/Users/cosmo-macpro/DEVEL/gccxml-0.6.0/build_${arch}/bin/gccxml
+#    WRAP_ITK_TCL:BOOL=ON
+#    WRAP_ITK_DOC:BOOL=ON
     "
     )
 
