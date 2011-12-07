@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=/usr/local/git/bin:/opt/local/bin:$PATH
+
 # Move into the directory that contains the scripts
 cd /Users/alexgouaillard/DEVEL/GITROOT/DashboardScripts
 
@@ -12,9 +14,9 @@ ctest -S SIgN-Karoshi2-i386-nightly.cmake   -V >& SIgN-Karoshi2-i386-nightly.log
 ctest -S SIgN-Karoshi2-x86_64-nightly.cmake -V >& SIgN-Karoshi2-x86_64-nightly.log
 
 ctest -S SIgN-Karoshi2-x86_64-GDCM-PROPER-nightly.cmake -V >& SIgN-Karoshi2-x86_64-GDCM-PROPER-nightly.log
-ctest -S SIgN-Karoshi2-i386-GDCM-PROPER-nightly.cmake -V >& SIgN-Karoshi2-i386-GDCM-PROPER-nightly.log
-ctest -S SIgN-Karoshi2-x86_64-GDCM-FORK-nightly.cmake -V >& SIgN-Karoshi2-x86_64-GDCM-FORK-nightly.log
-ctest -S SIgN-Karoshi2-i386-GDCM-FORK-nightly.cmake -V >& SIgN-Karoshi2-i386-GDCM-FORK-nightly.log
+ctest -S SIgN-Karoshi2-i386-GDCM-PROPER-nightly.cmake -V  >& SIgN-Karoshi2-i386-GDCM-PROPER-nightly.log
+ctest -S SIgN-Karoshi2-x86_64-GDCM-FORK-nightly.cmake -V  >& SIgN-Karoshi2-x86_64-GDCM-FORK-nightly.log
+ctest -S SIgN-Karoshi2-i386-GDCM-FORK-nightly.cmake -V  >& SIgN-Karoshi2-i386-GDCM-FORK-nightly.log
 
 # Update the crontab for next day
 crontab SIgN-Karoshi2.crontab

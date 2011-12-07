@@ -32,7 +32,7 @@ macro(dashboard_hook_init)
 #    WRAP_ITK_TCL:BOOL=ON
 #    WRAP_ITK_DOC:BOOL=ON
     WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
-    GCCXML:FILEPATH=/Users/agouaillard/DEVEL/CVSROOT/gccxml/build-${arch}/bin/gccxml
+    GCCXML:FILEPATH=/Users/alexgouaillard/DEVEL/CVSROOT/gccxml/build-${arch}/bin/gccxml
     "
     )
 
