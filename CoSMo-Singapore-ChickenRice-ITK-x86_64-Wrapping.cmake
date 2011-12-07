@@ -1,7 +1,7 @@
 # maintainer: Gaëtan Lehmann <gaetan.lehmann@jouy.inra.fr>
 # gcc (GCC) 4.2
 
-set( arch i386 ) # ppc;i386;ppc64;x86_64
+set( arch x86_64 ) # ppc;i386;ppc64;x86_64
 set( CTEST_SITE "ChickenRice.CoSMo.sg" )
 set( CTEST_BUILD_NAME "Darwin-c++-4.2-${arch}-WRAPITK" )
 set( CTEST_BUILD_CONFIGURATION "Release" )

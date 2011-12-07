@@ -1,2 +1,2 @@
-59 20 * * * /Users/CoSMoTest-Mac/DEVEL/GITROOT/DashboardScripts/CoSMo-Singapore-Durian-ITK-runtest.sh > /tmp/log.tests
+59 20 * * * /Users/CoSMoTest-Mac/DEVEL/GITROOT/DashboardScripts/CoSMo-Singapore-Durian-ITK-runtests.sh > /tmp/log.tests
 
