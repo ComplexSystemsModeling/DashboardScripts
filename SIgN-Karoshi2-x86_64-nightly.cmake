@@ -26,13 +26,17 @@ macro(dashboard_hook_init)
     ITK_USE_REVIEW:BOOL=ON
     USE_WRAP_ITK:BOOL=ON
     WRAP_ITK_USE_CCACHE:BOOL=ON
-#    WRAP_ITK_EXPLICIT:BOOL=ON
+    PYTHON_EXECUTABLE:FILEPATH=/opt/local/bin/python2.7
+    PYTHON_INCLUDE_DIR:PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/Headers
+    PYTHON_LIBRARY:FILEPATH=/opt/local/lib/libpython2.7.dylib
+    PY_SITE_PACKAGES_PATH:PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
+    WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
+    GCCXML:FILEPATH=/Users/alexgouaillard/DEVEL/CVSROOT/gccxml/build-${arch}/bin/gccxml
     WRAP_ITK_JAVA:BOOL=ON
     WRAP_ITK_PYTHON:BOOL=ON
 #    WRAP_ITK_TCL:BOOL=ON
+#    WRAP_ITK_EXPLICIT:BOOL=ON
 #    WRAP_ITK_DOC:BOOL=ON
-    WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
-    GCCXML:FILEPATH=/Users/alexgouaillard/DEVEL/CVSROOT/gccxml/build-${arch}/bin/gccxml
     "
     )
 
