@@ -11,10 +11,8 @@ set( CTEST_TEST_ARGS PARALLEL_LEVEL 8 )
 set( dashboard_root_name "Dashboards" )
 set( dashboard_binary_name ITK-${arch} )
 
-set(ENV{CC}  gcc-4.2)
-set(ENV{CXX} c++-4.2)
-set(ENV{CFLAGS} "")
-set(ENV{CXXFLAGS} "")
+set(ENV{CC}  gcc)
+set(ENV{CXX} g++)
 
 macro(dashboard_hook_init)
   set( dashboard_cache "
@@ -23,7 +21,8 @@ macro(dashboard_hook_init)
     BUILD_EXAMPLES:BOOL=ON
     BUILD_SHARED_LIBS:BOOL=ON
     ITK_LEGACY_SILENT:BOOL=ON
-    ITK_USE_REVIEW:BOOL=ON
+    ITK_USE_CCACHE:BOOL=ON
+#    ITK_USE_REVIEW:BOOL=ON
 #    USE_WRAP_ITK:BOOL=ON
 #    WRAP_ITK_JAVA:BOOL=ON
 #    WRAP_ITK_PYTHON:BOOL=ON
