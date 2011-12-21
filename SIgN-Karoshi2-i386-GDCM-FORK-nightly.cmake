@@ -11,10 +11,8 @@ set( CTEST_TEST_ARGS PARALLEL_LEVEL 8 )
 set( dashboard_root_name "Dashboards" )
 set( dashboard_binary_name ITK-${arch}-SYSTEM-GDCM-FORK )
 
-set(ENV{CC}  gcc-4.2)
-set(ENV{CXX} c++-4.2)
-set(ENV{CFLAGS} "")
-set(ENV{CXXFLAGS} "")
+set(ENV{CC}  gcc)
+set(ENV{CXX} g++)
 
 macro(dashboard_hook_init)
   set( dashboard_cache "
@@ -26,15 +24,6 @@ macro(dashboard_hook_init)
     ITK_USE_REVIEW:BOOL=ON
     ITK_USE_SYSTEM_GDCM:BOOL=ON
     GDCM_DIR:PATH=/Users/alexgouaillard/DEVEL/GITROOT/GDCM-FORK-Build-${arch}
-#    USE_WRAP_ITK:BOOL=ON
-#    WRAP_ITK_JAVA:BOOL=ON
-#    WRAP_ITK_PYTHON:BOOL=ON
-#    WRAP_ITK_TCL:BOOL=ON
-#    WRAP_ITK_DOC:BOOL=ON
-#    WRAP_ITK_USE_CCACHE:BOOL=ON
-#    WRAP_ITK_EXPLICIT:BOOL=ON
-#    WRAP_ITK_USE_SYSTEM_GCCXML:BOOL=ON
-#    GCCXML:FILEPATH=/Users/CoSMoTest-Mac/src/gccxml/build-${arch}/bin/gccxml
     "
     )
 

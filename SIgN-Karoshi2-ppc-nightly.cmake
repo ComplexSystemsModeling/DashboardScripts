@@ -11,10 +11,11 @@ set( CTEST_TEST_ARGS PARALLEL_LEVEL 8 )
 set( dashboard_root_name "Dashboards" )
 set( dashboard_binary_name ITK-${arch} )
 
-set(ENV{CC}  gcc-4.2)
-set(ENV{CXX} c++-4.2)
-set(ENV{CFLAGS} "")
-set(ENV{CXXFLAGS} "")
+# this was redirectign to a compiler that did not use CCache
+# set(ENV{CC}  gcc-4.2)
+# set(ENV{CXX} c++-4.2)
+# set(ENV{CFLAGS} "")
+# set(ENV{CXXFLAGS} "")
 
 macro(dashboard_hook_init)
   set( dashboard_cache "
