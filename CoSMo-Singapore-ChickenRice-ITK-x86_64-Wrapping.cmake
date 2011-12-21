@@ -1,4 +1,4 @@
-# maintainer: Gaëtan Lehmann <gaetan.lehmann@jouy.inra.fr>
+# maintainer: Alex. Gouaillard <agouaillard@gmail.com>
 # gcc (GCC) 4.2
 
 set( arch x86_64 ) # ppc;i386;ppc64;x86_64
@@ -11,8 +11,8 @@ set( CTEST_TEST_ARGS PARALLEL_LEVEL 8 )
 set( dashboard_root_name "Dashboards" )
 set( dashboard_binary_name ITK-${arch}-WRAPITK )
 
-set(ENV{CC}  gcc-4.2)
-set(ENV{CXX} c++-4.2)
+set(ENV{CC}  gcc)
+set(ENV{CXX} g++)
 
 macro(dashboard_hook_init)
   set( dashboard_cache "
@@ -24,15 +24,11 @@ macro(dashboard_hook_init)
     # need to be explicit here because of conflicting port install
     PYTHON_LIBRARY:FILEPATH=/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib
     ITK_USE_REVIEW:BOOL=ON
-    # review requires a lot of java heap
-    WRAP_ITK_JAVAC_ARGS:STRING=-J-mx2048m
-    USE_WRAP_ITK:BOOL=ON
-    WRAP_ITK_JAVA:BOOL=ON
-    WRAP_ITK_PYTHON:BOOL=ON
-    WRAP_ITK_USE_CCACHE:BOOL=ON
-#    WRAP_ITK_EXPLICIT:BOOL=ON
-#    WRAP_ITK_TCL:BOOL=ON
-#    WRAP_ITK_DOC:BOOL=ON
+    ITK_WRAP_JAVA:BOOL=ON
+    ITK_WRAP_PYTHON:BOOL=ON
+    ITK_USE_CCACHE:BOOL=ON
+    ITK_USE_SYSTEM_SWIG:BOOL=ON
+    #TODO: ITK_USE_SYSTEM_GCCXML
     "
     )
 

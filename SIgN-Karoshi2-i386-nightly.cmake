@@ -25,6 +25,10 @@ macro(dashboard_hook_init)
     ITK_WRAP_JAVA:BOOL=ON
     ITK_WRAP_PYTHON:BOOL=ON
     ITK_USE_CCACHE:BOOL=ON
+<<<<<<< HEAD
+=======
+    ITK_USE_SYSTEM_SWIG:BOOL=ON
+>>>>>>> 8468057e295d7d4620198433ede82385e7db4edc
     ITK_USE_SYSTEM_GCCXML:BOOL=ON
     GCCXML:FILEPATH=/Users/alexgouaillard/DEVEL/CVSROOT/gccxml/build-${arch}/bin/gccxml
     "
